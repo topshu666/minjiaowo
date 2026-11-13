@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#101b2b">
+<title>民教窝｜民办教育人的同行社区</title>
+<meta name="description" content="民教窝，服务民办学校教师及民办教育从业者。聊行业、说现场、找出路、互相搭把手。">
+<style>
+:root{--ink:#17283b;--muted:#68788b;--navy:#101b2b;--blue:#4f8cff;--cyan:#76d7d0;--cream:#f7f8f5;--line:#e6eae8;--warm:#ffbd91}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,"PingFang SC","Microsoft YaHei",system-ui,sans-serif;color:var(--ink);background:#fbfcfa;line-height:1.65}a{color:inherit;text-decoration:none}.wrap{width:min(1160px,calc(100% - 44px));margin:auto}
+header{height:76px;display:flex;align-items:center;position:sticky;top:0;z-index:20;background:rgba(251,252,250,.88);backdrop-filter:blur(16px);border-bottom:1px solid rgba(230,234,232,.8)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:11px;font-weight:850;font-size:21px;letter-spacing:.02em}.logo{width:38px;height:38px;border-radius:13px;background:linear-gradient(145deg,#4f8cff,#70d4ce);display:grid;place-items:center;color:white;font-size:19px;box-shadow:0 7px 18px #4f8cff40}.brand small{display:block;font-size:10px;letter-spacing:.18em;color:#8290a0;font-weight:650;margin-top:-3px}.links{display:flex;align-items:center;gap:30px;color:#526174;font-size:14px}.links a:hover{color:#3979e8}.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:11px 20px;background:var(--navy);color:white;font-weight:700;font-size:14px;transition:.2s}.nav-cta:hover,.btn:hover{transform:translateY(-2px);box-shadow:0 10px 22px #101b2b25}.menu{display:none;border:0;background:none;font-size:25px;color:var(--ink)}
+.hero{position:relative;overflow:hidden;background:radial-gradient(ellipse at 80% 15%,#26496b 0,transparent 38%),radial-gradient(ellipse at 8% 95%,#1d4b58 0,transparent 40%),#101b2b;color:white;padding:94px 0 88px}
+.hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(#ffffff09 1px,transparent 1px),linear-gradient(90deg,#ffffff09 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(to bottom,black,transparent 92%)}
+.glow{position:absolute;width:420px;height:420px;border-radius:50%;background:#4f8cff26;filter:blur(55px);right:8%;top:10%}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:55px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:9px;border:1px solid #ffffff30;background:#ffffff0d;padding:7px 13px;border-radius:30px;color:#c9d8e9;font-size:12px;letter-spacing:.08em}.pulse{width:7px;height:7px;background:#79d9c8;border-radius:50%;box-shadow:0 0 0 5px #79d9c824}
+h1{font-size:clamp(42px,5.6vw,68px);line-height:1.13;letter-spacing:-.045em;margin:24px 0 20px;font-weight:850}.hero h1 em{font-style:normal;color:#80d8d0}.hero p{font-size:17px;color:#bdcada;max-width:560px;margin:0 0 30px}.hero-actions{display:flex;gap:13px;flex-wrap:wrap}.btn.primary{background:linear-gradient(110deg,#4f8cff,#56bfc2);box-shadow:0 10px 28px #4f8cff38}.btn.ghost{background:#ffffff12;border:1px solid #ffffff36}.hero-note{font-size:12px!important;color:#8fa3b7!important;margin-top:17px!important}
+.visual{position:relative;min-height:390px;display:grid;place-items:center}.orbit{position:absolute;width:330px;height:330px;border:1px solid #ffffff25;border-radius:50%;box-shadow:0 0 0 36px #ffffff08,0 0 0 72px #ffffff05}.orbit:before,.orbit:after{content:"";position:absolute;border:1px dashed #8edbd34a;border-radius:50%;inset:34px}.orbit:after{inset:75px}.core{width:154px;height:154px;border-radius:44px;display:grid;place-items:center;text-align:center;background:linear-gradient(145deg,#5b91f2,#56c9bd);box-shadow:0 25px 65px #4e9bdc65;transform:rotate(-7deg);z-index:2}.core span{font-size:42px;line-height:1}.core b{font-size:15px;display:block;margin-top:5px}.float-card{position:absolute;z-index:3;background:#ffffffed;color:var(--ink);border:1px solid #ffffff;border-radius:16px;padding:13px 16px;box-shadow:0 16px 40px #0003;font-size:12px}.float-card strong{display:block;font-size:14px}.fc1{top:30px;right:0}.fc2{bottom:42px;left:0}.fc3{right:4px;bottom:40px}.mini-avatars{display:flex;margin-top:8px}.mini-avatars i{font-style:normal;width:25px;height:25px;border:2px solid white;border-radius:50%;display:grid;place-items:center;background:#e4f1ef;margin-right:-6px;font-size:12px}
+.trust{background:#fff;border-bottom:1px solid var(--line)}.trust-row{display:grid;grid-template-columns:repeat(4,1fr);padding:23px 0;gap:16px}.trust-item{display:flex;align-items:center;gap:12px;color:#68788b;font-size:13px}.trust-item b{display:block;color:#25394f;font-size:14px}.trust-icon{width:38px;height:38px;border-radius:12px;background:#edf5f4;display:grid;place-items:center;font-size:18px}
+section{padding:88px 0}.section-head{max-width:650px;margin-bottom:38px}.kicker{font-size:12px;color:#478d94;letter-spacing:.16em;font-weight:800}.section-head h2{font-size:clamp(30px,4vw,42px);line-height:1.2;letter-spacing:-.03em;margin:10px 0 12px}.section-head p{color:var(--muted);margin:0;font-size:15px}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.pillar{padding:27px;border:1px solid var(--line);border-radius:20px;background:#fff;transition:.25s;position:relative;overflow:hidden}.pillar:hover{transform:translateY(-5px);box-shadow:0 18px 40px #20364b0d;border-color:#cbdedc}.pillar .num{font-size:11px;letter-spacing:.12em;color:#9aa8b5}.pillar .ico{width:49px;height:49px;border-radius:15px;background:#edf5f4;display:grid;place-items:center;font-size:23px;margin:19px 0 15px}.pillar h3{font-size:19px;margin:0 0 8px}.pillar p{font-size:14px;color:var(--muted);margin:0}.pillar .tag{display:inline-block;margin-top:18px;font-size:11px;color:#438b8c;background:#edf8f5;border-radius:30px;padding:5px 10px}
+.manifesto{background:#f0f5f3}.manifesto-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}.quote-card{background:var(--navy);color:white;border-radius:24px;padding:35px;position:relative;overflow:hidden;min-height:280px}.quote-card:after{content:"“";position:absolute;font-family:Georgia;font-size:220px;line-height:1;color:#ffffff0d;right:12px;bottom:-68px}.quote-card .quote{font-size:27px;font-weight:750;line-height:1.45;position:relative;z-index:1}.quote-card small{display:block;color:#9eb1c4;margin-top:22px}.manifesto-copy h2{font-size:36px;line-height:1.25;margin:0 0 16px}.manifesto-copy p{color:#637487;font-size:15px}.values{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}.values span{border:1px solid #d6e2de;background:#ffffffb8;border-radius:30px;padding:8px 13px;font-size:13px;color:#47616b}
+.feed{background:#fff}.feed-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.feed-card{border:1px solid var(--line);border-radius:20px;padding:25px;background:linear-gradient(140deg,#fff,#f8fbfa)}.feed-top{display:flex;justify-content:space-between;align-items:center;color:#7b8b99;font-size:12px}.feed-top span{color:#448f8e;background:#eaf6f2;padding:5px 10px;border-radius:20px}.feed-card h3{font-size:20px;margin:18px 0 9px}.feed-card p{color:var(--muted);font-size:14px;margin:0}.feed-bottom{margin-top:22px;padding-top:15px;border-top:1px solid var(--line);font-size:12px;color:#8493a1;display:flex;justify-content:space-between}
+.principles{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.principle{padding:22px 0;border-top:2px solid #c8dfd9}.principle b{font-size:16px}.principle p{font-size:13px;color:var(--muted);margin:8px 0 0}
+.cta{padding:0 0 88px}.cta-panel{background:linear-gradient(115deg,#16283c,#1e4755);border-radius:28px;padding:54px;display:flex;align-items:center;justify-content:space-between;gap:30px;color:white;position:relative;overflow:hidden}.cta-panel:after{content:"";position:absolute;width:300px;height:300px;border:1px solid #ffffff20;border-radius:50%;right:20%;top:-190px;box-shadow:0 0 0 35px #ffffff08,0 0 0 70px #ffffff06}.cta-panel h2{font-size:32px;line-height:1.25;margin:0 0 10px;position:relative;z-index:1}.cta-panel p{color:#b6c8d1;margin:0;position:relative;z-index:1}.cta-panel .btn{background:#fff;color:#1b3348;white-space:nowrap;position:relative;z-index:2}
+footer{background:#0d1725;color:#9aabba;padding:34px 0}.footer-row{display:flex;justify-content:space-between;gap:25px;align-items:center}.footer-brand{color:white;font-size:18px;font-weight:800}.footer-brand small{display:block;color:#74879a;font-size:11px;font-weight:500}.footer-links{display:flex;gap:20px;font-size:12px}.copyright{font-size:11px;color:#64768a;margin-top:20px}
+@media(max-width:800px){.links{display:none;position:absolute;top:75px;left:0;right:0;background:#fbfcfa;padding:18px 24px;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}.links.open{display:flex}.menu{display:block}.nav-cta{display:none}.hero{padding:70px 0 55px}.hero-grid,.manifesto-grid{grid-template-columns:1fr;gap:30px}.visual{min-height:310px}.orbit{width:260px;height:260px}.core{width:125px;height:125px}.fc1{right:4%}.fc2{left:2%}.fc3{right:1%;bottom:20px}.trust-row{grid-template-columns:1fr 1fr}.pillars{grid-template-columns:1fr 1fr}.manifesto-grid{gap:25px}.feed-grid{grid-template-columns:1fr}.principles{grid-template-columns:1fr}.cta-panel{padding:35px;align-items:flex-start;flex-direction:column}.footer-row{align-items:flex-start;flex-direction:column}}
+@media(max-width:520px){.wrap{width:min(100% - 32px,1160px)}h1{font-size:43px}.hero p{font-size:15px}.visual{min-height:280px}.orbit{width:220px;height:220px}.core{width:112px;height:112px;border-radius:32px}.fc1{top:10px}.fc2{bottom:16px}.fc3{display:none}section{padding:66px 0}.pillars{grid-template-columns:1fr}.trust-row{gap:14px}.trust-item{font-size:11px}.trust-item b{font-size:12px}.quote-card{padding:27px;min-height:230px}.quote-card .quote{font-size:23px}.manifesto-copy h2{font-size:30px}.cta-panel h2{font-size:27px}.footer-links{flex-wrap:wrap}}
+</style>
+</head>
+<body>
+<header>
+ <div class="wrap nav">
+  <a class="brand" href="#home"><span class="logo">窝</span><span>民教窝<small>MINJIAO COMMUNITY</small></span></a>
+  <nav class="links" id="navLinks"><a href="#about">关于民教窝</a><a href="#sections">社区板块</a><a href="#culture">社区氛围</a><a href="#principles">社区约定</a></nav>
+  <a class="nav-cta" href="#join">走进民教窝 ↗</a>
+  <button class="menu" id="menuBtn" aria-label="打开导航">☰</button>
+ </div>
+</header>
+<main id="home">
+ <section class="hero">
+  <div class="glow"></div><div class="wrap hero-grid">
+   <div>
+    <div class="eyebrow"><i class="pulse"></i> 民办教育人的同行社区</div>
+    <h1>教育路上，<br>我们不必<em>独自硬扛。</em></h1>
+    <p>这里属于每一位认真工作的民办学校教师，也属于每一位身处民办教育行业、愿意彼此理解和互相搭把手的人。</p>
+    <div class="hero-actions"><a class="btn primary" href="#sections">探索社区内容 <span style="margin-left:9px">→</span></a><a class="btn ghost" href="#about">认识民教窝</a></div>
+    <p class="hero-note">聊真实处境 · 分享一线经验 · 一起寻找更多可能</p>
+   </div>
+   <div class="visual" aria-label="社区连接示意图">
+    <div class="orbit"></div><div class="core"><div><span>✳</span><b>民教窝</b></div></div>
+    <div class="float-card fc1"><strong>行业风向</strong><span>看见变化，也看见机会</span></div>
+    <div class="float-card fc2"><strong>教师现场</strong><span>那些只有同行懂的瞬间</span><div class="mini-avatars"><i>📚</i><i>☕</i><i>✏️</i><i>🌱</i></div></div>
+    <div class="float-card fc3"><strong>一起想办法</strong><span>经验 · 资源 · 支持</span></div>
+   </div>
+  </div>
+ </section>
+ <div class="trust"><div class="wrap trust-row">
+  <div class="trust-item"><span class="trust-icon">🧑‍🏫</span><div><b>面向教师与从业者</b>不是学生社区</div></div>
+  <div class="trust-item"><span class="trust-icon">💬</span><div><b>真实交流</b>尊重一线经验</div></div>
+  <div class="trust-item"><span class="trust-icon">🧭</span><div><b>关注职业成长</b>也关注未来出路</div></div>
+  <div class="trust-item"><span class="trust-icon">🤝</span><div><b>彼此支持</b>让经验流动起来</div></div>
+ </div></div>
+ <section id="about">
+  <div class="wrap">
+   <div class="section-head"><div class="kicker">WHY MINJIAO</div><h2>给民办教育同行，一个<br>可以说真话、找办法的地方。</h2><p>学校在变化，行业在变化，教师面对的现实也在变化。我们不回避压力，也不消费焦虑。民教窝希望把分散的经验、信息和善意连接起来。</p></div>
+   <div class="pillars">
+    <article class="pillar"><div class="num">01 / UNDERSTAND</div><div class="ico">🫶</div><h3>有人懂你的不容易</h3><p>招生压力、家校沟通、班级管理、职业选择……那些不方便对外人说的事，在这里可以找到同行的理解。</p><span class="tag">情绪共鸣</span></article>
+    <article class="pillar"><div class="num">02 / SHARE</div><div class="ico">🛰️</div><h3>重要信息不再错过</h3><p>关注民办教育行业动态、政策变化与学校发展趋势，让信息更及时，让判断更有依据。</p><span class="tag">行业信息</span></article>
+    <article class="pillar"><div class="num">03 / GROW</div><div class="ico">🌱</div><h3>把经验变成自己的底气</h3><p>交流教学管理方法，探索职业成长路径，也认真讨论行业变化之下的更多可能。</p><span class="tag">职业成长</span></article>
+   </div>
+  </div>
+ </section>
+ <section class="manifesto" id="culture">
+  <div class="wrap manifesto-grid">
+   <div class="quote-card"><div class="quote">我们不保证<br>每个问题都有标准答案。<br>但至少，<br>你不需要一个人面对。</div><small>民教窝 · 写给每一位同行者</small></div>
+   <div class="manifesto-copy"><div class="kicker">OUR BELIEF</div><h2>不贩卖焦虑，<br>也不假装一切都很好。</h2><p>民办教育有它的现实与难处。我们相信，真正有价值的社区，不是只说漂亮话，而是允许大家讲出真实处境，分享可复用的办法，在彼此的经验里找到一点方向。</p><p>你可以来提问，也可以来分享；可以暂时没有答案，也可以把自己踩过的坑留给后来的人。</p><div class="values"><span>真实，不端着</span><span>友善，不攻击</span><span>务实，有帮助</span><span>开放，能互助</span></div></div>
+  </div>
+ </section>
+ <section class="feed" id="sections">
+  <div class="wrap">
+   <div class="section-head"><div class="kicker">EXPLORE THE COMMUNITY</div><h2>从一个话题开始，<br>连接更多同行。</h2><p>六个内容空间，覆盖民办教育人的行业观察、工作现场、成长选择与日常交流。</p></div>
+   <div class="feed-grid">
+    <article class="feed-card"><div class="feed-top">01 / 行业观察 <span>行业风向</span></div><h3>行业正在发生什么变化？</h3><p>关注民办教育政策、行业趋势、学校发展与值得讨论的公共信息。少一点道听途说，多一点事实和判断。</p><div class="feed-bottom"><span>趋势 · 政策 · 观察</span><span>→</span></div></article>
+    <article class="feed-card"><div class="feed-top">02 / 一线日常 <span>教师现场</span></div><h3>那些只有老师才懂的现场。</h3><p>课堂、班级、办公室、家校沟通……分享真实经历、工作困惑和令人会心一笑的瞬间。</p><div class="feed-bottom"><span>教学 · 管理 · 日常</span><span>→</span></div></article>
+    <article class="feed-card"><div class="feed-top">03 / 向前一步 <span>成长与出路</span></div><h3>除了眼前的工作，还有哪些可能？</h3><p>讨论专业提升、考编、转型、技能学习与职业规划。尊重每个人不同的选择，不替别人做决定。</p><div class="feed-bottom"><span>成长 · 转型 · 职业选择</span><span>→</span></div></article>
+    <article class="feed-card"><div class="feed-top">04 / 同行互助 <span>问一问</span></div><h3>遇到难题，来问问同行。</h3><p>把具体问题说出来，听听不同学校、不同学科老师的经验。一个人的困惑，也许有很多人走过。</p><div class="feed-bottom"><span>提问 · 讨论 · 经验解答</span><span>→</span></div></article>
+    <article class="feed-card"><div class="feed-top">05 / 经验共享 <span>资源</span></div><h3>让好用的东西被更多人看见。</h3><p>分享教学工具、实用资料、工作模板与专业资源。鼓励真实体验和清晰说明，让分享真正有用。</p><div class="feed-bottom"><span>工具 · 资料 · 实用分享</span><span>→</span></div></article>
+    <article class="feed-card"><div class="feed-top">06 / 轻松连接 <span>社区广场</span></div><h3>工作之外，也聊聊生活。</h3><p>交流兴趣、生活见闻与轻松话题。这里不只有工作压力，也有同行之间普通而温暖的连接。</p><div class="feed-bottom"><span>交流 · 兴趣 · 社区互动</span><span>→</span></div></article>
+   </div>
+  </div>
+ </section>
+ <section id="principles">
+  <div class="wrap">
+   <div class="section-head"><div class="kicker">A GOOD COMMUNITY NEEDS CARE</div><h2>让交流有温度，<br>也有边界。</h2><p>我们希望民教窝是一个可以放心交流的同行空间。自由表达与相互尊重，并不冲突。</p></div>
+   <div class="principles">
+    <div class="principle"><b>尊重每一位同行</b><p>可以观点不同，但不人身攻击、不辱骂、不恶意嘲讽。</p></div>
+    <div class="principle"><b>围绕社区主题交流</b><p>优先讨论民办教育、教师工作、职业成长及相关生活话题。</p></div>
+    <div class="principle"><b>让信息尽量真实</b><p>分享时注明来源与适用情况，不传播未经核实的消息。</p></div>
+    <div class="principle"><b>拒绝不当内容</b><p>不发布违法违规、色情低俗、歧视煽动及其他有害内容。</p></div>
+    <div class="principle"><b>广告有专属空间</b><p>商业推广请遵守社区规则，在指定区域发布，不打扰正常交流。</p></div>
+    <div class="principle"><b>共同维护社区</b><p>遇到不友善或违规内容，可以反馈给管理团队协助处理。</p></div>
+   </div>
+  </div>
+ </section>
+ <section class="cta" id="join"><div class="wrap"><div class="cta-panel"><div><h2>同行者，欢迎来坐坐。</h2><p>把你的经验留下，也把别人的经验带走。让每一次交流，都有一点实际的价值。</p></div><a class="btn" href="javascript:void(0)" onclick="alert('民教窝小程序入口将在正式上线后更新，敬请期待。')">民教窝，即将见面 ↗</a></div></div></section>
+</main>
+<footer><div class="wrap"><div class="footer-row"><div class="footer-brand">民教窝<small>让同行之间，多一点理解与支持。</small></div><div class="footer-links"><a href="#about">关于我们</a><a href="#sections">社区板块</a><a href="#principles">社区约定</a></div></div><div class="copyright">© 2026 民教窝 · 面向民办学校教师及民办教育从业者的同行社区</div></div></footer>
+<script>
+const menuBtn=document.getElementById('menuBtn'),navLinks=document.getElementById('navLinks');
+menuBtn.addEventListener('click',()=>navLinks.classList.toggle('open'));
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')));
+</script>
+</body>
+</html>
